@@ -1,5 +1,5 @@
 # ListGuru-PowerShell
-PowerShell script to help automate maintenance and reporting of the Handshake ListGuru Feature
+PowerShell scripts to help automate maintenance and reporting of the Handshake ListGuru Feature
 
 These utilities are provided as is and are designed to aid in maintenance of Handshake ListGuru Tables.  They are not built for the Handshake List Mirroring product that is used
 in SharePoint Online. 
@@ -19,13 +19,15 @@ After downloading the files you must edit file **lgm-utility-config.json** with 
 ### Invoke-LGM-RemirrorByTableName
 This utility will remirror all SharePoint Lists and Libraries connected to a single Mirror Table. 
 
-Arguments : 
+#### Arguments : 
 | Parameter | Type | Note |
 |-|-|-|
 | MirrorTableName | string | Table Name from SPListGuruMirrorInfo.[MirrorTableName] |
 | rebuild | switch | switch to force a SQL Table Rebuild - warning this will empty and then repopulate the SQL Table |
 
-Example
+#### Example
 ```powershell
 .\Invoke-LGM-RemirrorByTableName.ps1 -MirrorTableName Connect_FirmNews -rebuild
 ```
+#### Prerequisites
+Modify lgm-utility-config.json file with parameters specific to your Handshake environment.
